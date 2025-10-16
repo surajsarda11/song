@@ -6,32 +6,71 @@
   <title>My Song Player</title>
   <style>
     body {
-      background: linear-gradient(135deg, #1f1c2c, #928dab);
-      color: #fff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      text-align: center;
-      padding-top: 100px;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       height: 100vh;
       margin: 0;
+      color: #fff;
+      font-family: "Poppins", sans-serif;
     }
-    h1 {
-      color: #00e6e6;
-      margin-bottom: 30px;
+
+    .player {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 25px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      width: 320px;
+      backdrop-filter: blur(8px);
     }
+
+    .album-art {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 20px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .album-art:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.7);
+    }
+
+    .album-art img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h2 {
+      margin: 10px 0;
+      font-size: 1.3em;
+      letter-spacing: 0.5px;
+    }
+
     audio {
-      width: 80%;
-      max-width: 400px;
+      width: 100%;
       outline: none;
-      border-radius: 12px;
-      background: #fff;
+      margin-top: 15px;
     }
   </style>
 </head>
 <body>
-  <h1>🎵 Now Playing: song.mp3 🎵</h1>
-  <audio controls preload="auto">
-    <source src="https://raw.githubusercontent.com/surajsarda11/song/main/song.mp3" type="audio/mpeg">
-    Your browser does not support the audio tag.
-  </audio>
+  <div class="player">
+    <div class="album-art">
+      <img src="https://i.imgur.com/F1Uqz0f.png" alt="Album Art">
+    </div>
+    <h2>🎵 song.mp3 🎵</h2>
+    <audio controls preload="auto">
+      <source src="https://raw.githubusercontent.com/surajsarda11/song/main/song.mp3" type="audio/mpeg">
+      Your browser does not support the audio tag.
+    </audio>
+  </div>
 </body>
 </html>
