@@ -6,24 +6,31 @@
   <title>My Song Player</title>
   <style>
     body {
-      background: #101820;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
       color: #fff;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-align: center;
       padding-top: 100px;
+      height: 100vh;
+      margin: 0;
     }
-    h1 { color: #00bfff; }
+    h1 {
+      color: #00e6e6;
+      margin-bottom: 30px;
+    }
     audio {
-      margin-top: 30px;
       width: 80%;
       max-width: 400px;
+      outline: none;
+      border-radius: 12px;
+      background: #fff;
     }
   </style>
 </head>
 <body>
-  <h1>🎶 My Song 🎶</h1>
-  <audio controls>
-    <source src="mysong.mp3" type="audio/mpeg">
+  <h1>🎵 Now Playing: song.mp3 🎵</h1>
+  <audio controls preload="auto">
+    <source src="https://raw.githubusercontent.com/surajsarda11/song/main/song.mp3" type="audio/mpeg">
     Your browser does not support the audio tag.
   </audio>
 </body>
